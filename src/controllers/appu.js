@@ -5,7 +5,7 @@ import verifyjwt from "../utils/jwt.js";
 dotenv.config({ path: "../.env" });
 
 export default async function appu(rq, rs) {
-  const signature = await rq.cookies.signature;
+  const signature = rq.query["signature"];
   const secrete = process.env.SECRETE;
 
   if (signature) {

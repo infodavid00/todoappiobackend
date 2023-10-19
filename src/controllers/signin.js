@@ -27,12 +27,10 @@ export default async function signin(rq, rs) {
           secrete,
           { expiresIn: "1d" }
         );
-        rs.cookie("signature", token, {
-          httpOnly: true,
-        });
         rs.status(200).json({
           acknowledged: "Ok",
           message: "login success!",
+          data: token,
         });
       } else {
         rs.status(200).json({

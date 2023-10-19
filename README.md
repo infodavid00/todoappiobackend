@@ -18,17 +18,12 @@ Content-Type application/json
 
 # signin to existing account
 
-Endpoint DELETE /logout
-Content-Type: application/json
-
-# logout and clear token
-
-Endpoint GET /
+Endpoint GET /?signature=signature
 Content-Type: application/json
 
 # verify id route (main entry)
 
-Endpoint PUT /list/backup
+Endpoint PUT /list/backup?signature=signature
 Content-Type: application/json
 
 {
@@ -40,7 +35,7 @@ Content-Type: application/json
 
 # backup data to cloud
 
-Endpoint GET /list/restore
+Endpoint GET /list/restore?signature=signature
 Content-Type: application/json
 
 # restore data from cloud

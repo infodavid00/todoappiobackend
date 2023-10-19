@@ -35,12 +35,10 @@ export default async function signup(rq, rs) {
         secrete,
         { expiresIn: "1d" }
       );
-      rs.cookie("signature", token, {
-        httpOnly: true,
-      });
       rs.status(200).json({
         acknowledged: "Ok",
         message: "user created succesfully!",
+        data: token,
       });
     }
   } catch (err) {
