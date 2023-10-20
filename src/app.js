@@ -12,7 +12,7 @@ const port = process.env.PORT || 0;
 app.use(express.json());
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://todo-5d9a5.web.app/",
   credentials: true,
 };
 
