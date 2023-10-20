@@ -10,13 +10,7 @@ const app = express();
 const port = process.env.PORT || 0;
 
 app.use(express.json());
-
-const corsOptions = {
-  origin: "https://todo-5d9a5.web.app/",
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(cookieParser());
 
 app.use("/auth", auth);
