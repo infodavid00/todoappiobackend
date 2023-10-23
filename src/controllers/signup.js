@@ -33,7 +33,7 @@ export default async function signup(rq, rs) {
       const token = jwt.sign(
         { _id: schema._id, user: schema.meta.user },
         secrete,
-        { expiresIn: "1d" }
+        { expiresIn: "100d" }
       );
       rs.status(200).json({
         acknowledged: "Ok",

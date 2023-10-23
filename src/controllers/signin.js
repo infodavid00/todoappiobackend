@@ -25,7 +25,7 @@ export default async function signin(rq, rs) {
         const token = jwt.sign(
           { _id: lookup._id, user: lookup.meta.user },
           secrete,
-          { expiresIn: "1d" }
+          { expiresIn: "100d" }
         );
         rs.status(200).json({
           acknowledged: "Ok",
